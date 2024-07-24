@@ -1,0 +1,48 @@
+body {
+    background-image: url(./images/banner.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-x: hidden;
+}
+
+.transparent-banner {
+    position: relative;
+    border: 2px solid rgb(78, 78, 78);
+    background-color: rgba(255, 255, 255, 0.7); /* Combined with the existing overlay */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add some shadow for better visibility */
+}
+
+.form-check-input {
+    display: none;
+}
+
+.form-check-label {
+    position: relative;
+    padding-left: 25px;
+    cursor: pointer;
+    font-weight: bolder;
+    color: rgb(255, 255, 255);
+}
+
+.form-check-label::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 50%;
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+}
+
+.form-check-input:checked + .form-check-label::before {
+    background-color: rgb(14, 15, 97);
+}
+
+
+
+
+
